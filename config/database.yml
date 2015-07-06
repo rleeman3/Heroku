@@ -21,6 +21,6 @@ test:
   <<: *default
   database: flash_sale_test
 
-production:
-  <<: *default
-  database: flash_sale_production
+# production:
+#   <<: *default
+#   database: flash_sale_production

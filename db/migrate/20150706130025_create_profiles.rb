@@ -7,7 +7,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :state
       t.integer :postal_code
       t.string :email
-      t.url :website
+      t.string :website
       t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
