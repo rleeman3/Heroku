@@ -7,7 +7,7 @@ one:
   state: MyString
   postal_code: 1
   email: MyString
-  website: 
+  website: MyString
   user_id: 
 
 two:
@@ -17,5 +17,5 @@ two:
   state: MyString
   postal_code: 1
   email: MyString
-  website: 
+  website: MyString
   user_id: 

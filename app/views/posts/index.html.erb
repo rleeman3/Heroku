@@ -1,0 +1,26 @@
+<h1>Create a new Flash Sale!</h1>
+
+<%= link_to 'New Flash Sale', posts_new_path %>
+<% @posts.each do |post|%>
+<%= post %>
+<%end %>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Flash Sale Listing</th>
+		<th>Date</th>
+		<th colspan="6"></th>
+	</tr>
+	<tr>
+		<% @posts.each do |post| %>
+			<td><%= post.created_at %></td></br>
+			<td><%= post.restaurant_name %></td></br>
+		
+
+			<td class="btn btn-default"><%= link_to 'Show', posts_show_path %></td>
+			<td class="btn btn-default"><%= link_to 'Edit', posts_edit_path %></td>
+			
+	</tr>
+		<% end %>
+</table>

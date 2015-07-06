@@ -1,0 +1,15 @@
+<h1><%= @post.restaurant_name %></h1>
+<h2>Amazing Flash Sales!!</h2>
+
+<ul>
+	<%= @post.created_at %></br>
+	<%= @post.restaurant_name %></br>
+	<%= @restaurant.street_address %></br>
+	<%= @restaurant.city %></br>
+	<%= @restaurant.website %></br>
+
+</br>
+ 
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %> |
+<%= link_to 'Delete', order_path, method: :delete %>
