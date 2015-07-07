@@ -1,29 +1,24 @@
-<h1>Create a new Flash Sale!</h1>
-
+</br>
 <%= link_to 'New Flash Sale', new_post_path %>
-<% @posts.each do |post|%>
-<%= post %>
-<% end %>
-
 <table>
 	<tr>
-		<th>Name</th>
-		<th>Flash Sale Listing</th>
 		<th>Date</th>
+		<th>Restaurant</th>
+		<th>Flash Sale</th>
 		<th>Start Time</th>
 		<th>End Time</th>
-		<th colspan="6"></th>
+		<th colspan="2"></th>
 	</tr>
 	<tr>
 		<% @posts.each do |post| %>
-			<td><%= post.created_at %></td></br>
-			<td><%= post.restaurant_name %></td></br>
-			<td><%= post.start_time %></td></br>
-			<td><%= post.end_time %></td></br>
-
-			<td class="btn btn-default"><%= link_to 'Show', posts_path(@posts) %></td>
-			<td class="btn btn-default"><%= link_to 'Edit', edit_post_path(@post) %></td>
+			<td><%= post.created_at %></td>
+			<td><%= post.restaurant_name %></td>
+			<td><%= post.deal %></td>
+			<td><%= post.start_time %></td>
+			<td><%= post.end_time %></td>
 			
+			
+		
 	</tr>
 		<% end %>
 </table>

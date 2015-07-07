@@ -1,31 +1,32 @@
 
 <h1>Amazing Flash Sales!!</h1>
 
-<table>
-<tr>
-	<th>Date</th>
-	<th>Restaurant</th>
-	<th>Flash Sale</th>
-	<th>Start Time</th>
-	<th>End Time</th>
-	<th colspan="3"></th> 
-</tr>
+<p>
+<strong>Date:</strong>
+<%= @post.created_at %>
+</p>
+
+<p>
+<strong>Restaurant:</strong>
+<%= @post.restaurant_name %> %>
+</p>
+
+<p>
+<strong>Flashsale:</strong>
+<%= @post.deal %> %>
+</p>
+
+<p>
+<strong>Start Time:</strong>
+<%= @post.start_time %>
+</p>
+
+<p>
+<strong>End Time:</strong>
+<%= @post.end_time %>
+</p>
 
 
-<tr>
-	<td><%= @post.created_at %></td>
-	<td><%= @post.restaurant_name %></td>
-	<td><%= @post.deal %></td>
-	<td><%= @post.start_time %></td></br>
-	<td><%= @post.end_time %></td></br>
-
-		
-
-</tr>	
-</table>
-</br>
 
 
- 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Add Sale', new_post_path(@post) %>
+
