@@ -1,7 +1,33 @@
-<h1> My Profile - <%=@profiles.restaurant_name%> </h1>
 
+<h1> My Profile </h1>
+<%= link_to 'CREATE NEW FLASH SALE', new_post_path %>
 
-<% render 'form'%>
+<table>
+	<tr>
+		<th>Date</th>
+		<th>Restaurant</th>
+		<th>Flash Sale</th>
+		<th>Start Time</th>
+		<th>End Time</th>
+		<th colspan="2"></th>
+	</tr>
+		<% @posts.each do |post| %>
+	<tr>
+
+		<td><%= post.created_at %></td>
+		<td><%= post.restaurant_name %></td>
+		<td><%= post.deal %></td>
+		<td><%= post.start_time %></td>
+		<td><%= post.end_time %></td>
+		<td><%= link_to 'Edit sale', edit_post_path(post) %></td>
+		<td><%= link_to 'Destroy', post_path(post),
+       			method: :delete,
+       			data: { confirm: 'Are you sure?' } %></td>		
+	</tr>
+		<% end %>
+</table>
+
+</br><%= link_to 'Back to all sales', posts_path %>
 
 <strong> History</strong>
 </br>

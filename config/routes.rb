@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
  
-  devise_for :users
   root 'welcome#index'
+  devise_for :users
 
-  match '/posts' => 'posts#dashboard', :via => :get
   resources :posts
+
+  get '/dashboard' => 'posts#dashboard'
 
   # get 'welcome/index'
 
