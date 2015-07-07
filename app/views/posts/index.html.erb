@@ -9,8 +9,9 @@
 		<th>End Time</th>
 		<th colspan="2"></th>
 	</tr>
-	<tr>
 		<% @posts.each do |post| %>
+	<tr>
+
 			<td><%= post.created_at %></td>
 			<td><%= post.restaurant_name %></td>
 			<td><%= post.deal %></td>

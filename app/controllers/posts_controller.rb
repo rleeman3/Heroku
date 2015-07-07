@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	before_action :authenticate_user!, except: [:show, :index]
+	before_action :authenticate_user!, except: [:index, :show]
 
 #we want only current user to see/be able to crud posts.
   # def set_user
@@ -9,6 +9,10 @@ class PostsController < ApplicationController
 
   def index
   	@posts = Post.all
+  end
+
+  def dashboard
+    @posts = current_user.posts
   end
 
   def new
