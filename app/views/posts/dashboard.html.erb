@@ -1,4 +1,8 @@
-<h1> My Profile </h1>
+<h1> My Profile - <%=@profiles.restaurant_name%> </h1>
+
+
+<% render 'form'%>
+
 <strong> History</strong>
 </br>
 <%= link_to 'New Flash Sale', new_post_path %>
