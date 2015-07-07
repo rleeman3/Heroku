@@ -20,9 +20,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new post_params
+    @post = current_user.posts.build post_params
     if @post.save
-      redirect_to posts_path
+      redirect_to dashboard_path
     else
       render 'new'
     end
@@ -33,22 +33,22 @@ class PostsController < ApplicationController
   end
 
   def edit
-  	@post = Post.find(params[:id])
+  	@post = current_user.posts.find(params[:id])
   end
 
   def update
-  	@post = Post.find(params[:id])
+  	@post = current_user.posts.find(params[:id])
     if @post.update(post_params)
-      redirect_to posts_path
+      redirect_to dashboard_path
     else
       render 'edit'
     end
   end
 
   def destroy
-  	@post = Post.find(params[:id])
+  	@post = current_user.posts.find(params[:id])
   	@post.destroy 
-  	redirect_to posts_path
+  	redirect_to dashboard_path
   end
 
   private
