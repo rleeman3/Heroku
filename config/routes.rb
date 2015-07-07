@@ -2,8 +2,8 @@ Rails.application.routes.draw do
  
   devise_for :users
   root 'welcome#index'
-  
-  resources :dashboard
+
+  match '/posts' => 'posts#dashboard', :via => :get
   resources :posts
 
   # get 'welcome/index'
