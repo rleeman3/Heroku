@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
  
-  devise_for :users
   root 'welcome#index'
+<<<<<<< HEAD
   
+=======
+  devise_for :users
+
+>>>>>>> e43ad7cb9a59f40813364dadc12c9d7b1ffdaa52
   resources :posts
   
+
+  get '/dashboard' => 'posts#dashboard'
 
   # get 'welcome/index'
 
