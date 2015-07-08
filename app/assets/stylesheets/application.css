@@ -10,6 +10,10 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap/glyphicons
  *= require_tree .
+ *= require magister
+ *= require font-awesome
  *= require_self
+@import url(http://fonts.googleapis.com/css?family=Wire+One);
  */
