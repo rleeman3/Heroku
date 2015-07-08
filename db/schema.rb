@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20150708084649) do
     t.string   "address"
     t.string   "website"
     t.string   "restaurant"
+    t.float    "longitude"
+    t.float    "latitude"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
