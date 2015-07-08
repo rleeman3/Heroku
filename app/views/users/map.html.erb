@@ -1,0 +1,21 @@
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+<div id='map'></div>
+
+<style>
+	#map {
+		height: 400px;
+		width: 50%;
+	}
+</style>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoicmxlZW1hbjMiLCJhIjoiM2Q3ZmFjYTI3ZmExN2YyY2FlYTk2YzNmMDYzMzdiNTYifQ.arUn-ezGzGrlcgtqAiPicA';
+var map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([-33.926, 18.407], 14);
+
+var jsonURL = "/users/" + "<%=escape_javascript(params[:user_id]) %>" + "/map.json";
+
+var myLocations = L.mapbox.featureLayer()
+	.loadURL(jsonURL)
+	.addTo(map)
+</script>

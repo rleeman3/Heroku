@@ -1,13 +1,20 @@
 Rails.application.routes.draw do
  
+  get 'feedbacks/index'
+
+  get 'feedbacks/show'
+
   root 'welcome#index'
   devise_for :users
+
+  get '/users/:user_id/map', to: 'users#map'
 
   resources :welcome
   resources :posts
 
   get '/users' => 'users#index'
   get '/dashboard' => 'posts#dashboard'
+  get '/feedback' => 'feedbacks#index'
 
   # get 'welcome/index'
 

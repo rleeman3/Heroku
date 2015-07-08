@@ -17,10 +17,33 @@ class UsersController < ApplicationController
 					:'marker-size' => 'medium'
 				}
 			}
+		end
+		respond_to do |format|
+			format.html
+			format.json { render json: @geojson }
+		end
 	end
-	respond_to do |format|
-		format.html
-		format.json { render json: @geojson }
+
+	def map
+		@geojson = Array.new
+		user = User.find(params[:user_id])
+		@geojson << {
+				type: 'Feature',
+				geometry: {
+					type: 'Point',
+					coordinates: [user.longitude, user.latitude]
+				},
+				properties: {
+					name: user.restaurant,
+					address: user.address,
+					:'marker-color' => '#00607d',
+					:'marker-symbol' => 'circle',
+					:'marker-size' => 'medium'
+				}
+			}
+		respond_to do |format|
+			format.html
+			format.json { render json: @geojson }
+		end
 	end
-end
 end
