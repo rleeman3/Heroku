@@ -1,6 +1,11 @@
 
 <h1> My Profile </h1>
+<<<<<<< HEAD
+
+<%= link_to 'CREATE NEW FLASH SALE!', new_post_path %>
+=======
 <%= link_to 'CREATE NEW FLASH SALE', new_post_path %>
+>>>>>>> 157aa965e0a1513f6881ed0409cc553534af1d38
 
 <table>
 	<tr>
@@ -19,18 +24,31 @@
 		<td><%= post.deal %></td>
 		<td><%= post.start_time %></td>
 		<td><%= post.end_time %></td>
-		<td><%= link_to 'Edit sale', edit_post_path(post) %></td>
+		<td><%= link_to 'Edit Sale | | |', edit_post_path(post) %></td>
 		<td><%= link_to 'Destroy', post_path(post),
        			method: :delete,
+<<<<<<< HEAD
+       			data: { confirm: 'Are you sure?' } %></td>
+		
+=======
        			data: { confirm: 'Are you sure?' } %></td>		
+>>>>>>> 157aa965e0a1513f6881ed0409cc553534af1d38
 	</tr>
 		<% end %>
 </table>
 
+<<<<<<< HEAD
+</br><%= link_to 'Back To All Sales', posts_path %> | | |
+
+<%= link_to 'New Flash Sale', new_post_path %>
+
+
+=======
 </br><%= link_to 'Back to all sales', posts_path %>
 
 <strong> History</strong>
 </br>
 <%= link_to 'New Flash Sale', new_post_path %>
 
+>>>>>>> 157aa965e0a1513f6881ed0409cc553534af1d38
 

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   devise_for :users
 
+  resources :welcome
   resources :posts
 
   get '/dashboard' => 'posts#dashboard'
