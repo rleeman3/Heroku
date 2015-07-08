@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :posts
   
 
+  get '/users' => 'users#index'
   get '/dashboard' => 'posts#dashboard'
 
   # get 'welcome/index'
