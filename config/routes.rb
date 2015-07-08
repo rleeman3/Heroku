@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
  
   root 'welcome#index'
-<<<<<<< HEAD
-  
-=======
   devise_for :users
 
->>>>>>> e43ad7cb9a59f40813364dadc12c9d7b1ffdaa52
   resources :posts
   
 
