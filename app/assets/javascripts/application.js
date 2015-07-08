@@ -12,5 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
+//= require magister
+//= require modernizr.custom.72241
 //= require turbolinks
 //= require_tree .
