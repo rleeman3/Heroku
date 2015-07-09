@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'feedbacks/show'
 
   root 'welcome#index'
+
   devise_for :users
 
   get '/users/:user_id/map', to: 'users#map'
