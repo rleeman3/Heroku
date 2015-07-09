@@ -30,6 +30,11 @@ body {
 	.mainmenu { position: fixed; }
 }
 
+.dropdown {
+  position: absolute;
+  right: 60px;
+}
+
 .navbar-toggle {
 	position:relative;
 	float:left;
