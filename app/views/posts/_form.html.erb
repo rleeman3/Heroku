@@ -1,44 +1,41 @@
 <%= form_for @post do |f| %>
-<div class="divider" id="section5"></div>  
-	<div class="row">
-	  
-	  <hr>
-	  
-	  <div class="col-sm-9 col-sm-offset-1">
-		  
 
-		    <div class="row form-group">
-				<div class="col-md-12">
-				<h1>New Flash Sale</h1>        
-		    </div>
 
-		    <div class="row form-group">
-			  <div class="col-xs-6">
-				<%= f.label "Restaurant:" %>
-				<%= f.text_field :restaurant_name %>
+	<div class="container">
+
+    	<div class="row">
+        	<div class="row-md-6">
+        		<center><h1>New Flash Sale</h1></center>
+        	</div>
+
+</br>
+
+        	<div class="row-md-6">
+        		<center><%= f.label "Restaurant:" %></center>
+				<center><%= f.text_field :restaurant_name, :placeholder => "Name" %></center>
+        	</div>
+
+        	<div class="row-md-6">
+				<center><%= f.label "Sale start time:" %></center>
+				<center><%= f.text_field :start_time %></center>
 			</div>
 
-		    <div class="row form-group">
-			  <div class="col-xs-6">
-				<%= f.label "Sale start time:" %>
-				<%= f.text_field :start_time %>
-			</div>
+			<div class="row-md-6">
+				<center><%= f.label "Sale end time:" %></center>
+				<center><%= f.text_field :end_time %></center>
+        	</div>
 
-		    <div class="row form-group">
-			  <div class="col-xs-6">
-				<%= f.label "Sale end time:" %>
-				<%= f.text_field :end_time %>
-			</div>
-
+        	<div class="row-md-8">
+        		<center><%= f.label "Flash sale deal:" %></center>
+				<center><%= f.text_field :deal, :placeholder => "Please describe discounts & menu items!" %></center>
+        	</div>
+</br>
 			<div class="row form-group">
-			  <div class="col-xs-6">
-				<%= f.label "Flash sale deal:" %>
-				<%= f.text_field :deal %>
+			  <div class="inline">
+				<center><%= f.submit %></center>
 			</div>
 
-			<div class="row form-group">
-			  <div class="col-xs-10">
-				<%= f.submit %>
-			</div>
+    	</div>
+	</div>
 
 <% end %>

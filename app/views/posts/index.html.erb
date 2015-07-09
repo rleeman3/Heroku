@@ -1,17 +1,4 @@
-
-<% if user_signed_in? %>
-	<%= link_to 'Dashboard', dashboard_path %>
-<% end %>
-
-<div class="row">
-	<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	
-		<h1 class="title">FLASH SALES</h1>
-	</div>
-</div>
-</br>
-<section class="section", id="head">
-<div class="container">
-<center>
+<!-- 
 	<table>
 		<tr>
 			<th>Date</th>
@@ -31,51 +18,27 @@
 			<td><%= post.end_time %></td>	
 		</tr>
 			<% end %>
-	</table>
+	</table> -->
 
-</br></br><%= link_to "Home", welcome_index_path %>
-</center>
-</div>
-</section>
-<!-- <section class="section" id="themes">
+
+
+<section class="section" id="themes">
 	<div class="container">
-	
-		<h2 class="text-center title">Flash</h2>
-		<p class="lead text-center">
+		<h2 class="text-center title">Fresh Flash Sales</h2>
+			<p class="lead text-center">
 			Huge thank you to our team of restaurants<br>
 			     and their enthusiastic customers!
-		</p>
-		<div class="row">
-			<div class="col-sm-4 col-sm-offset-2">
-				<div class="thumbnail">
-					<img src="assets/screenshots/sshot1.jpg" alt="">
-					<div class="caption">
-						<h3>
-							<table>
-								<tr>
-									<th>Date</th>
-									<th>Restaurant</th>
-									<th>Flash Sale</th>
-									<th>Start Time</th>
-									<th>End Time</th>
-									<th colspan="2"></th>
-								</tr>
-									<% @posts.each do |post| %>
-								<tr>
+			</p>
 
-									<td><%= post.created_at %></td>
-									<td><%= post.restaurant_name %></td>
-									<td><%= post.deal %></td>
-									<td><%= post.start_time %></td>
-									<td><%= post.end_time %></td>	
-								</tr>
-									<% end %>
-							</table>
-						<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-
+	<div class="posts">
+		<% @posts.each do |post| %>
+			<p><%= post.created_at %></p>
+			<p><%= post.restaurant_name %></p>
+			<p><%= post.deal %></p>
+			<p><%= post.start_time %></p>
+			<p><%= post.end_time %></p>
+		<% end %>
 	</div>
-</section> -->
+	
+
+
