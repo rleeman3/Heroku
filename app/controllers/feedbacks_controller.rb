@@ -1,4 +1,5 @@
 class FeedbacksController < ApplicationController
+   before_action :authenticate_user!, except: [:index]
   def create
   	@feedback = feedback.create(feedback_params)
   	if @feedback.save
