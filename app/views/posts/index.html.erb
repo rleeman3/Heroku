@@ -39,14 +39,18 @@
 <div class="col-sm-4">
 	<div class="thumbnail">
 	<div class="Flash Sale">
-		<h1><%= post.restaurant_name %></h1>
-		<p><%=post.start_time%></p>
-		<p><%=post.end_time%></p>
-		<p><%=post.deal%></p>
+		<h2><strong><%= post.restaurant_name %></strong></h2>
+		<h3><%=post.start_time%>-<%=post.end_time%></h3>
+		<h4><%=post.deal%></h4>
 
 <a href="/users/17/map" class="btn btn-default" role="Website Url">Location</a></p>
 		</div>
 	</div>
 </div>
 <% end %>
+
+<div class="col-sm-4">
+<div class="photos">
+	<img src="bakery8.jpg" alt="">
+</div>
 
