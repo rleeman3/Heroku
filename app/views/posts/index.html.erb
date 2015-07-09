@@ -1,26 +1,9 @@
-
-<!-- 
-	<table>
-		<tr>
-			<th>Date</th>
-			<th>Restaurant</th>
-			<th>Flash Sale</th>
-			<th>Start Time</th>
-			<th>End Time</th>
-			<th colspan="2"></th>
-		</tr>
-			<% @posts.each do |post| %>
-		<tr>
-
-			<td><%= post.created_at %></td>
-			<td><%= post.restaurant_name %></td>
-			<td><%= post.deal %></td>
-			<td><%= post.start_time %></td>
-			<td><%= post.end_time %></td>	
-		</tr>
-			<% end %>
-	</table> -->
-
+<style>
+	#map {
+		height: 500px;
+		width: 80%;
+	}
+</style>
 <div class="row">
 	<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
 		<h1 class="title">Today's Flash Sales</h1>
@@ -44,14 +27,45 @@
 		<h3><%=post.start_time%>-<%=post.end_time%></h3>
 		<h4><%=post.deal%></h4>
 
-<a href="/users/:user_id/map" class="btn btn-default" role="Website Url">Location</a></p>
+</p>
 		</div>
+
 	</div>
 </div>
 <% end %>
+<br>
+
+<center>
+<h3>All Locations</h3><br>
+<div id="map"></div>
+</center>
 
 <div class="col-sm-4">
 <div class="photos">
 	<img src="bakery8.jpg" alt="">
 </div>
 
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoicmxlZW1hbjMiLCJhIjoiM2Q3ZmFjYTI3ZmExN2YyY2FlYTk2YzNmMDYzMzdiNTYifQ.arUn-ezGzGrlcgtqAiPicA';
+var map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([-33.926, 18.407], 14);
+
+map.on('layeradd', function(e) {
+    var marker = e.layer,
+        feature = marker.feature;
+
+    // Create custom popup content
+    var popupContent = '<p>' + feature.properties.name + '</p>' + '<p>' + feature.properties.address + '</p>';
+
+    // http://leafletjs.com/reference.html#popup
+    marker.bindPopup(popupContent,{
+        closeButton: false,
+        minWidth: 320
+    });
+});
+
+
+var myLocations = L.mapbox.featureLayer()
+	.loadURL('/posts.json')
+	.addTo(map)
+</script>

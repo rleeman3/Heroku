@@ -6,9 +6,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  devise_for :users
-
-  get '/users/:user_id/map', to: 'users#map'
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
   resources :welcome
   resources :posts
