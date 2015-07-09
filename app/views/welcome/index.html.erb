@@ -1,41 +1,36 @@
 <section class="section" id="head">
 	<div class="container">
-
 <div class="row">
-
 		<div class="row">
-
 			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	
-
 				<!-- Site Title, your name, HELLO msg, etc. -->
 				<h1 class="title">Flash Sale</h1>
 				<h2 class="subtitle">Waste Less Food</h2>
-				<p>
-				<% if user_signed_in? %>
-				  Logged in as <strong><%= current_user.email %></strong>.
-				  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-				  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-				<% else %>
-				  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-				  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-				<% end %>
-				</p>
 				<!-- Short introductory (optional) -->
 				<h3 class="tagline">
 					Flash Sale strives to minimize food waste in Cape Town by encouraging restaurants to act more sustainably. Instead of throwing out any leftover food, restaurants are given the opportunity to create special end of the day deals to draw in their customers, 
 					increase their sales, and most importantly prevent waste. 
-
 				</h3>
+
 				
 				<!-- Nice place to describe your site in a sentence or two -->
 				<p><a href="/posts" class="btn btn-default btn-lg">Check Out Our Flash Sales!</a></p>
 	
 			</div> <!-- /col -->
 		</div> <!-- /row -->
-	
+
 	</div>
 </section>
-
-
+<center><p>
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Restaurant Sign Up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Restaurant Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+</p></center>
+</br></br>
 
 
