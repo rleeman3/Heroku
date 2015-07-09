@@ -19,7 +19,7 @@
 	<% @posts.each do |post| %>
 <tr>
 
-	<td><%= post.created_at %></td>
+	<td><%= post.created_at.strftime "%B %d %Y" %></td>
 	<td><%= post.restaurant_name %></td>
 	<td><%= post.deal %></td>
 	<td><%= post.start_time %></td>
