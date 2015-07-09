@@ -1,60 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="row-md-6">
+        		<center><h1>My Restaurant Profile</h1></center>
+        </div>
+<p><center><a href="/posts/new" class="btn btn-default btn-lg">Create A New Flash Sale!</a></center></p>
 
-<h1> My Profile </h1>
-
-
-
-
-
-<div class="row">
-	<div class="text-center">	
-		<h1 class="title"><small>My Profile</small></h1>
+<!-- <div class="column">
+	<div class="column-md-6">
+		<h1>Date</h1>
 	</div>
 </div>
-
-<section class="section" id="head">
-	<div class="container">
-<center>
-
-<p><a href="/posts/new" class="btn btn-default btn-lg">Create A New Flash Sale!</a></p>
+</div>
 
 
 <table>
-	<tr>
-		<th>Date</th>
-		<th>Restaurant</th>
-		<th>Flash Sale</th>
-		<th>Start Time</th>
-		<th>End Time</th>
-		<th colspan="2"></th>
-	</tr>
-		<% @posts.each do |post| %>
-	<tr>
+<tr>
+	<th>Date</th>
+	<th>Restaurant</th>
+	<th>Flash Sale</th>
+	<th>Start Time</th>
+	<th>End Time</th>
+	<th colspan="2"></th>
+</tr>
+	<% @posts.each do |post| %>
+<tr>
 
-		<td><%= post.created_at %></td>
-		<td><%= post.restaurant_name %></td>
-		<td><%= post.deal %></td>
-		<td><%= post.start_time %></td>
-		<td><%= post.end_time %></td>
-		<td><%= link_to 'Edit Sale | | |', edit_post_path(post) %></td>
-		<td><%= link_to 'Destroy', post_path(post),
-       			method: :delete,
-       			data: { confirm: 'Are you sure?' } %></td>
+	<td><%= post.created_at %></td>
+	<td><%= post.restaurant_name %></td>
+	<td><%= post.deal %></td>
+	<td><%= post.start_time %></td>
+	<td><%= post.end_time %></td>
+	<td><%= link_to 'Edit Sale | | |', edit_post_path(post) %></td>
+	<td><%= link_to 'Destroy', post_path(post),
+   			method: :delete,
+   			data: { confirm: 'Are you sure?' } %></td>
 
-	</tr>
-		<% end %>
-</table>
+</tr>
+	<% end %>
+</table> -->
 
-
-</br><%= link_to 'Back to all sales', posts_path %>
-
-
-<%= link_to 'New Flash Sale', new_post_path %>
-
-
-
-
-</br>
-
-</center>
 </div>
-</section>
