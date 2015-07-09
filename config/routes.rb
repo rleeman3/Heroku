@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   get '/users' => 'users#index'
   get '/dashboard' => 'posts#dashboard'
+  get '/contact' => 'posts#contact'
   get '/feedback' => 'feedbacks#index'
 
   # get 'welcome/index'
