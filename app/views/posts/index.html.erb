@@ -23,7 +23,7 @@
 
 <div class="row">
 	<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
-		<h1 class="title">Flash Sales</h1>
+		<h1 class="title">Today's Flash Sales</h1>
 
 			<p class="lead text-center">
 			Huge thank you to our team of restaurants<br>
@@ -34,23 +34,17 @@
 </div>
 </br>
 
-
-<% if user_signed_in? %>
-	<%= link_to 'Dashboard', dashboard_path %>
-<% end %>
-<!-- Third (Works) section -->
 <br/>
 <% @posts.each do |post| %>
 <div class="col-sm-4">
 	<div class="thumbnail">
-		<img src="bakery 8.jpeg" alt="">
 	<div class="Flash Sale">
-		<h2><%= post.restaurant_name %></h2>
-		<h3><%=post.start_time%></h3>
-		<h4><%=post.end_time%></h4>
+		<h1><%= post.restaurant_name %></h1>
+		<p><%=post.start_time%></p>
+		<p><%=post.end_time%></p>
 		<p><%=post.deal%></p>
 
-	<p><a href="#" class="btn btn-primary" role="Map">Button</a> <a href="#" class="btn btn-default" role="Website Url">Button</a></p>
+<a href="/users/17/map" class="btn btn-default" role="Website Url">Location</a></p>
 		</div>
 	</div>
 </div>
