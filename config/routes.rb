@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :welcome
   resources :posts
+  
 
   get '/users' => 'users#index'
   get '/dashboard' => 'posts#dashboard'
