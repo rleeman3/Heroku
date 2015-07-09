@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 
+gem 'puma'
 gem 'rails_12factor'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-glyphicons'

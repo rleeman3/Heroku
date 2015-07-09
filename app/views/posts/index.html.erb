@@ -2,29 +2,30 @@
 <% if user_signed_in? %>
 	<%= link_to 'Dashboard', dashboard_path %>
 <% end %>
+<!-- Third (Works) section -->
+<section class="section" id="posts">
+	
+			<% @posts.each do |post| %>
+			<div class="col-sm-4">
+				<div class="thumbnail">
+					<img src="assets/screenshots/sshot3.jpg" alt="">
+					<div class="Flash Sale">
+						<h2><%= post.restaurant_name %></h2>
+						<h3><%=post.start_time%></h3>
+						<h3><%=post.end_time%></h3>
+						<p><%=post.deal%></p>
+						<p><a href="#" class="btn btn-primary" role="Map">Button</a> <a href="#" class="btn btn-default" role="Website Url">Button</a></p>
+					</div>
+				</div>
+			</div>
+			<% end %>
+</section>
 
 
 </br>
 
 
-<body class="theme-invert">
-
-<nav class="mainmenu">
-	<div class="container">
-		<div class="dropdown">
-			<button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-			<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
-			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-				<li><a href="/welcome" class="active">Our Mission</a></li>
-				<li><a href="/posts">Flash Sales' Listings</a></li>
-				<li><a href="/dashboard">Restaurant Profile</a></li>
-				<li><a href="/feedback">Help Us Improve!</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
-
-<table>
+<!-- <table>
 	<tr>
 		<th>Date</th>
 		<th>Restaurant</th>
@@ -43,33 +44,12 @@
 		<td><%= post.end_time %></td>	
 	</tr>
 		<% end %>
-</table>
+</table> -->
 
 </br></br><%= link_to "Home", welcome_index_path %>
 
-	<table>
-		<tr>
-			<th>Date</th>
-			<th>Restaurant</th>
-			<th>Flash Sale</th>
-			<th>Start Time</th>
-			<th>End Time</th>
-			<th colspan="2"></th>
-		</tr>
-			<% @posts.each do |post| %>
-		<tr>
 
-			<td><%= post.created_at %></td>
-			<td><%= post.restaurant_name %></td>
-			<td><%= post.deal %></td>
-			<td><%= post.start_time %></td>
-			<td><%= post.end_time %></td>	
-		</tr>
-			<% end %>
-	</table>
-
-</br></br><%= link_to "Home", welcome_index_path %>
-
+<section class="section", id="head">
 
 <!-- <section class="section" id="themes">
 	<div class="container">
@@ -113,5 +93,4 @@
 
 	</div>
 </section> -->
-
 
