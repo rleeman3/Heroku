@@ -1,17 +1,39 @@
 <% if user_signed_in? %>
 	<%= link_to 'Dashboard', dashboard_path %>
 <% end %>
+<!-- Third (Works) section -->
+<br/>
+<% @posts.each do |post| %>
+<div class="col-sm-4">
+	<div class="thumbnail">
+		<img src="bakery 8.jpeg" alt="">
+	<div class="Flash Sale">
+		<h2><%= post.restaurant_name %></h2>
+		<h3><%=post.start_time%></h3>
+		<h4><%=post.end_time%></h4>
+		<p><%=post.deal%></p>
+
+	<p><a href="#" class="btn btn-primary" role="Map">Button</a> <a href="#" class="btn btn-default" role="Website Url">Button</a></p>
+		</div>
+	</div>
+</div>
+<% end %>
+
 
 <div class="row">
-	<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	
+	<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
 		<h1 class="title">FLASH SALES</h1>
 	</div>
 </div>
 </br>
 
+
+
+<!-- 
+
 	<div class="container">
 	
-		<h2 class="text-center title">More Themes</h2>
+		<h2 class="text-center title">Flash Sales</h2>
 		<p class="lead text-center">
 			Huge thank you to all people who publish<br>
 			their photos at <a href="http://unsplash.com">Unsplash</a>, thank you guys!
@@ -60,7 +82,7 @@
 
 		</div>
 
-	</div>
+	</div> -->
 
 
 <!-- <table>
