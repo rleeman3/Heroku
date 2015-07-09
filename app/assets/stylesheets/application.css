@@ -17,3 +17,18 @@
  *= require_self
  */
 @import url(http://fonts.googleapis.com/css?family=Wire+One);
+
+.edit_logout {
+  position: absolute;
+  z-index: 9000000;
+  right: 20px;
+}
+
+th {
+	background: lightgrey;
+	padding: 10px;
+}
+td {
+	background: white;
+	padding: 10px;
+}

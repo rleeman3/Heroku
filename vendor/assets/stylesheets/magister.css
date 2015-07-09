@@ -1,5 +1,5 @@
 html {
-	background:#505D6E url(http://photos-for-you.com/wp-content/uploads/2011/08/corn-fields-1-Sepia.jpg) no-repeat center center fixed; 
+	background:#505D6E url(http://agrodaily.com/wp-content/uploads/2013/10/wheat.jpg) no-repeat center center fixed; 
 	min-height:100%;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
@@ -14,7 +14,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
 	line-height: 1.5em;
-	font-size:14px;
+	font-size:16px;
 	font-family: Helvetica, Arial, sans-serif;
 	color:#fff;
 	color:rgba(255,255,255,.8); 
@@ -28,6 +28,11 @@ body {
 .mainmenu { z-index: 999999; width:100%;  padding: 30px 0 0 0;}
 @media (min-width: 768px) {
 	.mainmenu { position: fixed; }
+}
+
+.dropdown {
+  position: absolute;
+  right: 60px;
 }
 
 .navbar-toggle {
