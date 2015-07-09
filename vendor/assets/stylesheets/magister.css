@@ -1,5 +1,5 @@
 html {
-	background:#505D6E url(https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRfOQJg0aYw5AUt8yVdzHlD44i90Dupa66dD_JdPYNrWcx9El27) no-repeat center center fixed; 
+	background:#505D6E url(http://agrodaily.com/wp-content/uploads/2013/10/wheat.jpg) no-repeat center center fixed; 
 	min-height:100%;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
@@ -14,7 +14,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
 	line-height: 1.5em;
-	font-size:14px;
+	font-size:16px;
 	font-family: Helvetica, Arial, sans-serif;
 	color:#fff;
 	color:rgba(255,255,255,.8); 
