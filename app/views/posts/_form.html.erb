@@ -1,28 +1,45 @@
 <%= form_for @post do |f| %>
+<div class="divider" id="section5"></div>  
 
-	<div>
-		<%= f.label "Restaurant:" %>
-		<%= f.text_field :restaurant_name %>
-	</div>
+	<div class="row">
+	  
+	  <hr>
+	  
+	  <div class="col-sm-9 col-sm-offset-1">
+		  
 
-	<div>
-		<%= f.label "Sale start time:" %>
-		<%= f.text_field :start_time %>
-	</div>
+		  <div class="row form-group">
+			<div class="col-md-12">
+			<h1>New Flash Sale</h1>        
+			</div>
 
+		    <div class="row form-group">
+			  <div class="col-xs-6">
+				<%= f.label "Restaurant:" %>
+				<%= f.text_field :restaurant_name %>
+			</div>
 
-	<div>
-		<%= f.label "Sale end time:" %>
-		<%= f.text_field :end_time %>
-	</div>
+		    <div class="row form-group">
+			  <div class="col-xs-6">
+				<%= f.label "Sale start time:" %>
+				<%= f.text_field :start_time %>
+			</div>
 
-	<div>
-		<%= f.label "Flash sale deal:" %>
-		<%= f.text_field :deal %>
-	</div>
+		    <div class="row form-group">
+			  <div class="col-xs-6">
+				<%= f.label "Sale end time:" %>
+				<%= f.text_field :end_time %>
+			</div>
 
-	<div>
-		<%= f.submit %>
-	</div>
+			<div class="row form-group">
+			  <div class="col-xs-6">
+				<%= f.label "Flash sale deal:" %>
+				<%= f.text_field :deal %>
+			</div>
+
+			<div class="row form-group">
+			  <div class="col-xs-10">
+				<%= f.submit %>
+			</div>
 
 <% end %>

@@ -1,6 +1,3 @@
-<h1>FLASH SALE</h1>
-<p> Our Mission......... </p>
-</br><%= link_to 'See All Flash Sales!', posts_path %>
 <% if user_signed_in? %>
 	<%= link_to 'Add Sale', new_post_path(@post) %> | | |
 	<%= link_to 'Dashboard', dashboard_path %>
@@ -15,7 +12,7 @@
 			<button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 			<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
 			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-				<li><a href="/welcome/" class="active">Our Mission</a></li>
+				<li><a href="welcome/" class="active">Our Mission</a></li>
 				<li><a href="/posts/">Flash Sales' Listings</a></li>
 				<li><a href="dashboard/">Restaurant Sign Up/Login</a></li>
 				<li><a href="/feedback/">Help Us Improve!</a></li>

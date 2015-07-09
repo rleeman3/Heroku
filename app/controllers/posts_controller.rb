@@ -15,9 +15,6 @@ class PostsController < ApplicationController
     @posts = current_user.posts
   end
 
-  def feedback
-  end
-
   def new
     @post = Post.new
   end
