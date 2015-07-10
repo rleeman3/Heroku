@@ -19,12 +19,13 @@
 
 <br/>
 <% @posts.each do |post| %>
+
 <div class="col-sm-4">
 	<div class="thumbnail">
 	<div class="Flash Sale">
-		<h2><strong><%= post.restaurant_name %></strong></h2>
-		<h3><%=post.start_time%>-<%=post.end_time%></h3>
-		<h4><%=post.deal%></h4>
+		<center><h2><strong><%= post.restaurant_name %></strong></h2></center>
+		<center><h3><%=post.start_time%>-<%=post.end_time%></h3></center>
+		<center><h4><%=post.deal%></h4></center>
 
 </p>
 		</div>
@@ -64,3 +65,10 @@ var myLocations = L.mapbox.featureLayer()
 	.loadURL('/posts.json')
 	.addTo(map)
 </script>
+
+<style>
+h2 {
+	background-image: url('/images/greenery2.jpg');
+	color: white;
+}
+</style>
