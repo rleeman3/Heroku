@@ -35,10 +35,33 @@ td {
 	padding: 10px;
 }
 
+
 body{
 	background:rgba(255,255,255,.4);
+}
+
+.overlay {
+/*	height:100%;
+	width:100%;
+	position:fixed;
+	left:0;
+	top:0;
+	background-color: rgba(255,255,255,.4);*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	opacity: 0.4;
+	z-index: -1 !important;
+}
 
 
-	
-
+.main-content {
+	z-index: 100 !important;
+	overflow: auto;
+	height: 100%;
+	width: 100%;
+}
 

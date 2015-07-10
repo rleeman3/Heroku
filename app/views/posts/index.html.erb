@@ -1,7 +1,7 @@
 <style>
 	#map {
 		height: 500px;
-		width: 80%;
+		width: 100%;
 	}
 </style>
 
@@ -13,6 +13,7 @@
 			     and their enthusiastic customers!
 			</p>
 	</div>
+	<center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">See Locations</button></center>
 </div>
 </br>
 
@@ -35,10 +36,16 @@
 <% end %>
 <br>
 
-<center>
-<h3>All Locations</h3><br>
-<div id="map"></div>
-</center>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" id="map">
+    </div>
+
+  </div>
+</div>
 
 
 <script>
@@ -46,24 +53,27 @@ L.mapbox.accessToken = 'pk.eyJ1IjoicmxlZW1hbjMiLCJhIjoiM2Q3ZmFjYTI3ZmExN2YyY2FlY
 var map = L.mapbox.map('map', 'mapbox.streets')
     .setView([-33.926, 18.407], 14);
 
-map.on('layeradd', function(e) {
-    var marker = e.layer,
-        feature = marker.feature;
+$('#myModal').on('shown.bs.modal', function () { // chooseLocation is the id of the modal.
+    map.invalidateSize();
+    map.on('layeradd', function(e) {
+	    var marker = e.layer,
+	        feature = marker.feature;
 
-    // Create custom popup content
-    var popupContent = '<p>' + feature.properties.name + '</p>' + '<p>' + feature.properties.address + '</p>';
+	    // Create custom popup content
+	    var popupContent = '<p><b>' + feature.properties.name + '</b></p>' + '<p>' + feature.properties.address + '</p>';
 
-    // http://leafletjs.com/reference.html#popup
-    marker.bindPopup(popupContent,{
-        closeButton: false,
-        minWidth: 320
-    });
-});
+	    // http://leafletjs.com/reference.html#popup
+	    marker.bindPopup(popupContent,{
+	        closeButton: false,
+	        minWidth: 320
+	    });
+	});
 
+	var myLocations = L.mapbox.featureLayer()
+		.loadURL('/posts.json')
+		.addTo(map)
+ });
 
-var myLocations = L.mapbox.featureLayer()
-	.loadURL('/posts.json')
-	.addTo(map)
 </script>
 
 <<<<<<< HEAD
