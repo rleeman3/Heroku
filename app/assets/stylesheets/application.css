@@ -16,7 +16,7 @@
  *= require font-awesome
  *= require_self
  */
-@import url(http://fonts.googleapis.com/css?family=Wire+One);
+@import url(https://fonts.googleapis.com/css?family=Wire+One);
 
 .edit_logout {
   position: absolute;
@@ -31,4 +31,14 @@ th {
 td {
 	background: white;
 	padding: 18px;
+	color: #00008B;
+	padding: 10px;
 }
+
+body{
+	background:rgba(255,255,255,.4);
+
+
+	
+
+

@@ -24,7 +24,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
-gem "twitter-bootstrap-rails"
 gem 'puma'
 gem 'rails_12factor'
 gem 'twitter-bootstrap-rails'
