@@ -24,6 +24,18 @@ body {
 	font-weight: normal;
 }
 
+body {
+	margin:0;
+	padding:0;
+	width: 100%;
+	height: 100%;
+	position:fixed;
+	top: 0;
+	left: 0;
+	overflow: auto;
+}
+
+
 
 /********************************************************/
 /*                    Navigation bar                    */
@@ -188,6 +200,7 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	border:0 none;
 }
 .btn:hover {
+	
 	color:#000;
 }
 .btn-lg { 
