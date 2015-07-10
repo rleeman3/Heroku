@@ -5,7 +5,7 @@ html {
 	   -moz-background-size: cover;
 	     -o-background-size: cover;
 	        background-size: cover;
-	        
+
 
 
 
@@ -86,8 +86,8 @@ body {
 .mainmenu .dropdown-menu {
 	top: -14em;
 	left: 0px;
-	font-size: 13px;
-	padding:0;
+	font-size: 15px;
+	padding:o;
 	background:none;
 	border:0 none;
 	border-radius: 2px;
@@ -200,6 +200,7 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	border:0 none;
 }
 .btn:hover {
+	
 	color:#000;
 }
 .btn-lg { 
