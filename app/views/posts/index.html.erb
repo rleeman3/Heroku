@@ -25,8 +25,8 @@
 	<div class="thumbnail">
 	<div class="Flash Sale">
 		<center><h2><strong><%= post.restaurant_name %></strong></h2></center>
-		<center><h3><%=post.start_time%>-<%=post.end_time%></h3></center>
-		<center><h4><%=post.deal%></h4></center>
+		<center><h3><%=post.deal%></h3></center>
+		<center><h3><strong><%=post.start_time%>-<%=post.end_time%></strong></h3></center>
 
 </p>
 		</div>
@@ -34,7 +34,10 @@
 	</div>
 </div>
 <% end %>
-<br>
+
+
+</br>
+
 
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
@@ -45,8 +48,8 @@
     </div>
 
   </div>
-</div>
 
+</div>
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoicmxlZW1hbjMiLCJhIjoiM2Q3ZmFjYTI3ZmExN2YyY2FlYTk2YzNmMDYzMzdiNTYifQ.arUn-ezGzGrlcgtqAiPicA';
@@ -79,9 +82,10 @@ $('#myModal').on('shown.bs.modal', function () { // chooseLocation is the id of 
 
 <style>
 h2 {
-	background-image: url('/images/green.jpg');
+	background-image:url('/images/green.jpg');
 	background:rgba(80,200,80,.5);
 	color: white;
+	/*background-image: rgba(0,0,0,.3)*/;
 }
 </style>
 

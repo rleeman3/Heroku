@@ -18,27 +18,35 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Wire+One);
 
+
 .edit_logout {
   position: absolute;
   z-index: 9000000;
   right: 20px;
 }
 
+
 th {
-	background: lightgrey;
-	padding: 18px;
-}
-td {
-	background: white;
-	padding: 18px;
-	color: #00008B;
-	padding: 10px;
+	color: white;
+	font-size: 20px;
+	background: rgba(80,200,80,.5);
+	padding: 25px;
+
 }
 
+
+td {
+	background: rgba(255,255,255,.375);
+	padding: 18px;
+	color: black;
+}
 
 body{
-	background:rgba(255,255,255,.4);
+	background:rgba(255,255,255,.275);
 }
+
+
+
 
 .overlay {
 /*	height:100%;
@@ -64,4 +72,5 @@ body{
 	height: 100%;
 	width: 100%;
 }
+
 
