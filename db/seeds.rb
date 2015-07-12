@@ -7,7 +7,7 @@ puts "Generating flash sales..."
 
 Post.delete_all
 Post.create!  restaurant_name: 'Vovo Telo', start_time: '8pm', end_time: '10pm', deal: 'Buy 5 bagels for R20'
-Post.create!  restaurant_name: 'Knead', start_time: '6pm', end_time: '7pm', deal: 'Buy a loaf of bread and get 2 free'
+Post.create!  restaurant_name: 'Knead', start_time: '6pm', end_time: '7pm', deal: 'Free dessert with meal'
 Post.create!  restaurant_name: 'iXperience', start_time: '6pm', end_time: '8pm', deal: '1 Coupon, 2 Coffees'
 Post.create!  restaurant_name: 'Randys', start_time: '8pm', end_time: '10pm', deal: 'Muffins 75% off'
 Post.create!  restaurant_name: 'Societi Bistro', start_time: '10pm', end_time: '12pm', deal: 'Two salads for R50'
