@@ -76,4 +76,13 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+#Adds the mailer in production for email confirmation.
+  config.action_mailer.default_url_options = {:host => 'evening-scrubland-9655.herokuapp.com'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "127.0.0.1",
+    :port    => 25,
+    :domain  => 'evening-scrubland-9655.herokuapp.com'
+  }
 end
